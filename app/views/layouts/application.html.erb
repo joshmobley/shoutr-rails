@@ -10,7 +10,6 @@
   </head>
 
   <body>
-    <%= yield %>
     
     <% if signed_in? %>
       Signed in as: <%= current_user.email %>
@@ -24,6 +23,8 @@
         <div class="flash <%= key %>"><%= value %></div>
       <% end %>
     </div>
+    
+    <%= yield %>
 
   </body>
   
