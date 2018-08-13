@@ -1,1 +1,10 @@
 <h1>dashboard</h1>
+
+<%= form_for @shout do |form| %>
+    <%= form.text_field :body, placeholder: "Shout here!", required: true %>
+    <%= form.submit "Shout!" %>
+<% end %>
+
+<% @shouts.each do |shout| %>
+    <p><%= shout.body %></p>
+<% end %>
